@@ -16,7 +16,17 @@ class Application implements Runnable {
 
             // Creation des flux
             BufferedReader in = new BufferedReader(new InputStreamReader(sock_com.getInputStream()));
-            PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(sock_com.getOutputStream())), true);
+
+            String str;
+            PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(sock_com.getOutputStream())),true);
+            // Echange entre serveur et client
+            str = in.readLine(); // lecture du message
+            System.out.println("Message reçu = " + str);
+            out.println(str); // renvoi du message reçu écho
+
+            in.close();
+            out.close();
+            sock_com.close();
         } catch (IOException e) {
             System.out.println("Erreur E/S");
         }
