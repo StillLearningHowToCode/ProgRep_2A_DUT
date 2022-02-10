@@ -35,6 +35,8 @@ class Application extends Thread {
             return ((Carre)requete ).execute();
         else if (requete instanceof Somme )
             return ((Somme)requete).execute();
+        else if (requete instanceof Facto )
+            return ((Facto)requete).execute();
         else return null;
     }
 }

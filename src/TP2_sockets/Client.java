@@ -51,6 +51,22 @@ public class Client {
             System.out.flush();
             System.out.println(in.readObject());
 
+            System.out.println("--------------");
+
+            // Lancer le calcul de la facto
+            System.out.println("Calcul de la facto ");
+            System.out.flush();
+
+            out.writeObject(new Facto(4));
+            out.flush();
+
+            // Résultat de la somme
+            System.out.println("Résultat de la facto ");
+            System.out.flush();
+            System.out.println(in.readObject());
+
+            // ---------------------------------------
+
             emission.close();
             out.flush();
         } catch( IOException e) {
