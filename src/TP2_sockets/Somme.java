@@ -9,6 +9,6 @@ public class Somme extends TraitRequete {
     }
 
     public Object execute() {
-        return new Integer(x+y);
+        return (x+y);
     }
 }

@@ -1,5 +1,4 @@
 package TP2_sockets;
-
 // Client
 import java.io.*;
 import java.net.*;
@@ -62,6 +61,20 @@ public class Client {
 
             // Résultat de la somme
             System.out.println("Résultat de la facto ");
+            System.out.flush();
+            System.out.println(in.readObject());
+
+            System.out.println("--------------");
+
+            // Lancer le calcul de la facto
+            System.out.println("Calcul du degre 2 ");
+            System.out.flush();
+
+            out.writeObject(new Degre2(10,5,6));
+            out.flush();
+
+            // Résultat de la somme
+            System.out.println("Résultat du degre 2 ");
             System.out.flush();
             System.out.println(in.readObject());
 

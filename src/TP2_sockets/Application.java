@@ -33,10 +33,12 @@ class Application extends Thread {
             return new java.util.Date();
         else if (requete instanceof Carre)
             return ((Carre)requete ).execute();
-        else if (requete instanceof Somme )
+        else if (requete instanceof Somme)
             return ((Somme)requete).execute();
-        else if (requete instanceof Facto )
+        else if (requete instanceof Facto)
             return ((Facto)requete).execute();
+        else if (requete instanceof Degre2)
+            return ((Degre2)requete).execute();
         else return null;
     }
 }
