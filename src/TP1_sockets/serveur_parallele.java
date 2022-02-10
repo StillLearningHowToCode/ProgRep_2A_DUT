@@ -1,4 +1,4 @@
-package TD1;
+package TP1_sockets;
 // serveur_parallele
 import java.io.*;
 import java.net.*;

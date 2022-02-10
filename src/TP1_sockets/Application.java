@@ -1,4 +1,4 @@
-package TD1;
+package TP1_sockets;
 import java.io.*;
 import java.net.*;
 

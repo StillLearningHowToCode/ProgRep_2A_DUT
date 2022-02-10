@@ -1,4 +1,4 @@
-package TD1;
+package TP1_sockets;
 // Client.java
 import java.io.*;
 import java.net.*;
