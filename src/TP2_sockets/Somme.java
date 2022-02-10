@@ -3,7 +3,7 @@ package TP2_sockets;
 public class Somme extends TraitRequete {
     int x, y;
 
-    public Somme (int n) {
+    public Somme (int x, int y) {
         this.x=x;
         this.y=y;
     }

@@ -25,6 +25,8 @@ public class Client {
             System.out.println(in.readObject());
             System.out.flush();
 
+            System.out.println("--------------");
+
             // Lancer le calcul du carré
             System.out.println("Calcul du carré ");
             System.out.flush();
@@ -33,6 +35,19 @@ public class Client {
 
             // Résultat du carré
             System.out.println("Résultat du carré ");
+            System.out.flush();
+            System.out.println(in.readObject());
+
+            System.out.println("--------------");
+
+            // Lancer le calcul de la somme
+            System.out.println("Calcul de la somme ");
+            System.out.flush();
+            out.writeObject(new Somme(2,4));
+            out.flush();
+
+            // Résultat de la somme
+            System.out.println("Résultat de la somme ");
             System.out.flush();
             System.out.println(in.readObject());
 
