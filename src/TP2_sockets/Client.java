@@ -66,15 +66,34 @@ public class Client {
 
             System.out.println("--------------");
 
-            // Lancer le calcul de la facto
+            // Lancer le calcul du degre2
             System.out.println("Calcul du degre 2 ");
             System.out.flush();
 
             out.writeObject(new Degre2(10,5,6));
             out.flush();
 
-            // Résultat de la somme
+            // Résultat du degre2
             System.out.println("Résultat du degre 2 ");
+            System.out.flush();
+            System.out.println(in.readObject());
+
+            System.out.println("--------------");
+
+            // Lancer le calcul du degre2
+            System.out.println("Calcul du produit de vecteurs ");
+            System.out.flush();
+            double[] v1 = new double [2];
+            double [] v2 = new double [2] ;
+            v1[0] = 1;
+            v1[1] = 10;
+            v2[0] = 4;
+            v2[1] = 11;
+            out.writeObject(new ProduitVecteur(v1,v2));
+            out.flush();
+
+            // Résultat du degre2
+            System.out.println("Résultat du produit de vecteurs ");
             System.out.flush();
             System.out.println(in.readObject());
 

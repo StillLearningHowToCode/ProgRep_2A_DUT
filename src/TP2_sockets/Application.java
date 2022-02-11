@@ -5,7 +5,7 @@ import java.util.*;
 
 class Application extends Thread {
     Socket client;
-    Application (Socket client ) throws SocketException {
+    Application (Socket client) throws SocketException {
         this.client = client;
     }
     public void run() {
@@ -39,6 +39,8 @@ class Application extends Thread {
             return ((Facto)requete).execute();
         else if (requete instanceof Degre2)
             return ((Degre2)requete).execute();
+        else if (requete instanceof ProduitVecteur)
+            return ((ProduitVecteur)requete).execute();
         else return null;
     }
 }
