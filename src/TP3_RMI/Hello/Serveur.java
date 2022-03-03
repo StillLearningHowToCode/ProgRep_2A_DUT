@@ -11,7 +11,7 @@ public class Serveur {
             int port = 8000;
             // Naming.rebind ("hello", new HelloImpl());
             LocateRegistry.createRegistry(port);
-            Naming.rebind("rmi://localhost:8000/Hello", new HelloImpl());
+            Naming.rebind("rmi://localhost:"+ port +"/Hello", new HelloImpl());
             System.out.println("Hello Server prêt !");
         } catch (Exception e) {
             System.out.println("Hello Server échec " + e);
