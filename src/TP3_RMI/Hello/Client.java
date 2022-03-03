@@ -7,9 +7,9 @@ public class Client {
         try {
             int port = 8000;
             // Pour obtenir une référence sur l'objet distant à partir de son nom,
-            // il faut utiliser la méthode statique lookup() de la classe Naming. 
+            // il faut utiliser la méthode statique lookup() de la classe Naming.
             // Cette méthode attend en paramètre une URL indiquant le nom qui référence l'objet distant.
-            HelloInterface obj = (HelloInterface) Naming.lookup("rmi://localhost:port/Hello");
+            HelloInterface obj = (HelloInterface) Naming.lookup("rmi://localhost:8000/Hello");
             System.out.println(obj.echo());
         } catch (Exception e) {
             System.out.println("HelloClient exception: " + e);
