@@ -9,7 +9,9 @@ public class Client {
             // il faut utiliser la méthode statique lookup() de la classe Naming.
             // Cette méthode attend en paramètre une URL indiquant le nom qui référence l'objet distant.
             DegreInterface obj = (DegreInterface) Naming.lookup("rmi://localhost:"+ port +"/degre");
-            System.out.println(obj.degre2(30,20,3));
+            System.out.println(obj.degre2(0,2,3));
+            System.out.println(obj.degre2(1,2,3));
+            System.out.println(obj.degre2(1,4,3));
         } catch (Exception e) {
             System.out.println("Degré2 Client exception: " + e);
         }
